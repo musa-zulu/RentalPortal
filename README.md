@@ -5,4 +5,9 @@ Rental portal is a system that allows users to rent cars, caravans and trailers
 # Tech stack
 
 - RESTful API implementation with ASP.NET Core
-- To be updated soon
+- SQL
+- JWT, authentication, authorization
+- CQRS, Commands, Queries & Events handlers
+- Using RabbitMQ as a message queue with RawRabbit
+- CI & CD with build services such as AzureDevOps
+- more to be updated soon
