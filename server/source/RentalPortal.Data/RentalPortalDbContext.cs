@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using RentalPortal.Data.Models;
 
 namespace RentalPortal.Data
 {
@@ -15,6 +13,6 @@ namespace RentalPortal.Data
         {
         }
 
-
+        public virtual DbSet<Status> Statuses { get; set; }
     }
 }

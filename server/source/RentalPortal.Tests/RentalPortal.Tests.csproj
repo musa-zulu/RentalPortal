@@ -17,4 +17,8 @@
     <PackageReference Include="PeanutButter.Utils" Version="1.2.375" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RentalPortal.Data\RentalPortal.Data.csproj" />
+  </ItemGroup>
+
 </Project>
