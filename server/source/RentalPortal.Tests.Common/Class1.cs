@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RentalPortal.Data
+namespace RentalPortal.Tests.Common
 {
     public class Class1
     {

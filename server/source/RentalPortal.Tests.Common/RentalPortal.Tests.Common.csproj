@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PeanutButter.RandomGenerators" Version="1.2.375" />
+    <PackageReference Include="PeanutButter.Utils" Version="1.2.375" />
+  </ItemGroup>
+
+</Project>
