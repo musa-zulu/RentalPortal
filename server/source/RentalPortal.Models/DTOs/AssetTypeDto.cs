@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace RentalPortal.Data.Models
+namespace RentalPortal.Models.DTOs
 {
-    public class Status : EntityBase
+    public class AssetTypeDto
     {
-        public Guid StatusId { get; set; }
+        public Guid AssetTypeId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }

@@ -1,12 +1,12 @@
 ﻿using NUnit.Framework;
 using PeanutButter.TestUtils.Generic;
-using RentalPortal.Data.Models;
+using RentalPortal.Models.DTOs;
 using System;
 
-namespace RentalPortal.Tests.RentalPortal.Data.Models
+namespace RentalPortal.Tests.RentalPortal.Models.DTOs
 {
     [TestFixture]
-    public class TestStatus
+    public class TestRentalHistoryDto
     {
         [Test]
         public void Construct()
@@ -14,17 +14,19 @@ namespace RentalPortal.Tests.RentalPortal.Data.Models
             //---------------Set up test pack-------------------
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
-            Assert.DoesNotThrow(() => new Status());
+            Assert.DoesNotThrow(() => new RentalHistoryDto());
             //---------------Test Result -----------------------
         }
 
-        [TestCase("StatusId", typeof(Guid))]
-        [TestCase("Name", typeof(string))]
-        [TestCase("Description", typeof(string))]
+        [TestCase("RentalHistoryDtoId", typeof(Guid))]
+        [TestCase("RentalAssetDto", typeof(RentalAssetDto))]
+        [TestCase("RentalClubCardDto", typeof(RentalClubCardDto))]
+        [TestCase("CheckedOut", typeof(DateTime))]
+        [TestCase("CheckedIn", typeof(DateTime?))]
         public void Type_ShouldHaveProperty(string propertyName, Type propertyType)
         {
             //---------------Set up test pack-------------------
-            var sut = typeof(Status);
+            var sut = typeof(RentalHistoryDto);
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
             sut.ShouldHaveProperty(propertyName, propertyType);

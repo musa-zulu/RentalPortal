@@ -6,7 +6,7 @@ using System;
 namespace RentalPortal.Tests.RentalPortal.Data.Models
 {
     [TestFixture]
-    public class TestStatus
+    public class TestEntityBase
     {
         [Test]
         public void Construct()
@@ -14,17 +14,18 @@ namespace RentalPortal.Tests.RentalPortal.Data.Models
             //---------------Set up test pack-------------------
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
-            Assert.DoesNotThrow(() => new Status());
+            Assert.DoesNotThrow(() => new EntityBase());
             //---------------Test Result -----------------------
         }
 
-        [TestCase("StatusId", typeof(Guid))]
-        [TestCase("Name", typeof(string))]
-        [TestCase("Description", typeof(string))]
+        [TestCase("AddedBy", typeof(string))]
+        [TestCase("LastUpdatedBy", typeof(string))]
+        [TestCase("DateCreated", typeof(DateTime?))]
+        [TestCase("DateLastModified", typeof(DateTime?))]
         public void Type_ShouldHaveProperty(string propertyName, Type propertyType)
         {
             //---------------Set up test pack-------------------
-            var sut = typeof(Status);
+            var sut = typeof(EntityBase);
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
             sut.ShouldHaveProperty(propertyName, propertyType);

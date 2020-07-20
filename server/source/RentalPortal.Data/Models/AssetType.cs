@@ -2,9 +2,9 @@
 
 namespace RentalPortal.Data.Models
 {
-    public class Status : EntityBase
+    public class AssetType : EntityBase
     {
-        public Guid StatusId { get; set; }
+        public Guid AssetTypeId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }

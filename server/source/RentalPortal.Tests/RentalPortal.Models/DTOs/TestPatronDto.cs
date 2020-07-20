@@ -1,12 +1,12 @@
 ﻿using NUnit.Framework;
 using PeanutButter.TestUtils.Generic;
-using RentalPortal.Data.Models;
+using RentalPortal.Models.DTOs;
 using System;
 
-namespace RentalPortal.Tests.RentalPortal.Data.Models
+namespace RentalPortal.Tests.RentalPortal.Models.DTOs
 {
     [TestFixture]
-    public class TestStatus
+    public class TestPatronDto
     {
         [Test]
         public void Construct()
@@ -14,17 +14,23 @@ namespace RentalPortal.Tests.RentalPortal.Data.Models
             //---------------Set up test pack-------------------
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
-            Assert.DoesNotThrow(() => new Status());
+            Assert.DoesNotThrow(() => new PatronDto());
             //---------------Test Result -----------------------
         }
 
-        [TestCase("StatusId", typeof(Guid))]
-        [TestCase("Name", typeof(string))]
-        [TestCase("Description", typeof(string))]
+        [TestCase("PatrolDtoId", typeof(Guid))]
+        [TestCase("FirstName", typeof(string))]
+        [TestCase("LastName", typeof(string))]
+        [TestCase("Gender", typeof(string))]
+        [TestCase("AddressId", typeof(Guid))]
+        [TestCase("TelephoneId", typeof(Guid))]
+        [TestCase("DateOfBirth", typeof(DateTime))]
+        [TestCase("RentalClubCardDto", typeof(RentalClubCardDto))]
+        [TestCase("RentalBranchDto", typeof(RentalBranchDto))]
         public void Type_ShouldHaveProperty(string propertyName, Type propertyType)
         {
             //---------------Set up test pack-------------------
-            var sut = typeof(Status);
+            var sut = typeof(PatronDto);
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
             sut.ShouldHaveProperty(propertyName, propertyType);
