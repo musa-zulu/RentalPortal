@@ -20,6 +20,8 @@
   <ItemGroup>
     <ProjectReference Include="..\RentalPortal.Data\RentalPortal.Data.csproj" />
     <ProjectReference Include="..\RentalPortal.Models\RentalPortal.Models.csproj" />
+    <ProjectReference Include="..\RentalPortal.Service\RentalPortal.Service.csproj" />
+    <ProjectReference Include="..\RentalPortal.Tests.Common\RentalPortal.Tests.Common.csproj" />
   </ItemGroup>
 
 </Project>
