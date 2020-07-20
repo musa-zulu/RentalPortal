@@ -19,3 +19,7 @@ mobile/node_modules/
 
 client/package-lock.json
 client/package.json
+
+server/source/.vs/RentalPortal/v15/
+
+server/source/.vs/RentalPortal/v16/
