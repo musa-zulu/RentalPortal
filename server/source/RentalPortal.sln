@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalPortal.Web", "RentalPortal.Web\RentalPortal.Web.csproj", "{579FBB9B-5FAE-45E9-8CDE-8374876F7E5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentalPortal", "RentalPortal.Web\RentalPortal.csproj", "{579FBB9B-5FAE-45E9-8CDE-8374876F7E5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalPortal.Tests", "RentalPortal.Tests\RentalPortal.Tests.csproj", "{E69A4F00-5512-43A0-ADCE-B03E6AA60D75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentalPortal.Tests", "RentalPortal.Tests\RentalPortal.Tests.csproj", "{E69A4F00-5512-43A0-ADCE-B03E6AA60D75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalPortal.Data", "RentalPortal.Data\RentalPortal.Data.csproj", "{CD7ABDC0-7DC5-42DC-9194-00C15E9A3DFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentalPortal.Data", "RentalPortal.Data\RentalPortal.Data.csproj", "{CD7ABDC0-7DC5-42DC-9194-00C15E9A3DFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalPortal.Models", "RentalPortal.Models\RentalPortal.Models.csproj", "{352FEB81-13DC-4B6E-8913-FD69F553C423}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentalPortal.Models", "RentalPortal.Models\RentalPortal.Models.csproj", "{352FEB81-13DC-4B6E-8913-FD69F553C423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalPortal.Tests.Common", "RentalPortal.Tests.Common\RentalPortal.Tests.Common.csproj", "{48C77E34-E02C-4134-B154-86608F84EE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentalPortal.Tests.Common", "RentalPortal.Tests.Common\RentalPortal.Tests.Common.csproj", "{48C77E34-E02C-4134-B154-86608F84EE68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalPortal.Service", "RentalPortal.Service\RentalPortal.Service.csproj", "{E4FB03AA-A1A7-4D0D-99BB-7315496D40A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentalPortal.Service", "RentalPortal.Service\RentalPortal.Service.csproj", "{E4FB03AA-A1A7-4D0D-99BB-7315496D40A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
