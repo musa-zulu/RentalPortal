@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace RentalPortal.Web
+namespace RentalPortal
 {
     public class Program
     {

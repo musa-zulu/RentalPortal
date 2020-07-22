@@ -5,12 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
     <PackageReference Include="PeanutButter.RandomGenerators" Version="1.2.375" />
     <PackageReference Include="PeanutButter.Utils" Version="1.2.375" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RentalPortal.Data\RentalPortal.Data.csproj" />
+    <ProjectReference Include="..\RentalPortal.Service\RentalPortal.Service.csproj" />
   </ItemGroup>
 
 </Project>

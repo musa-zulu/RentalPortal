@@ -1,23 +1,27 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RentalPortal.Infrastructure.Extension;
+using RentalPortal.Service;
+using Serilog;
 
-namespace RentalPortal.Web
+namespace RentalPortal
 {
     public class Startup
     {
+        private readonly IConfigurationRoot configRoot;
         public Startup(IConfiguration configuration)
         {
+            Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).CreateLogger();
             Configuration = configuration;
+
+            IConfigurationBuilder builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
+            configRoot = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -26,10 +30,26 @@ namespace RentalPortal.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext(Configuration, configRoot);
+
+            services.AddAutoMapper();
+
+            services.AddAddScopedServices();
+
+            services.AddTransientServices();
+
+            services.AddSwaggerOpenAPI();
+
+            services.AddMailSetting(Configuration);
+
+            services.AddMediatorCQRS();
+
+            services.AddVersion();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory log)
         {
             if (env.IsDevelopment())
             {
@@ -41,6 +61,12 @@ namespace RentalPortal.Web
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.ConfigureCustomExceptionMiddleware();
+
+            app.ConfigureSwagger();
+
+            log.AddSerilog();
 
             app.UseEndpoints(endpoints =>
             {

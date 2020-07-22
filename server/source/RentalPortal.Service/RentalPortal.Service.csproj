@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RentalPortal.Data\RentalPortal.Data.csproj" />
+    <ProjectReference Include="..\RentalPortal.Models\RentalPortal.Models.csproj" />
   </ItemGroup>
 
 </Project>
